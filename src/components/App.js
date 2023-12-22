@@ -3,6 +3,10 @@ import '../css/App.css';
 import ListContacts from './ListContacts';
 
 function App() {
+  const removeContact = (contact) => {
+    setContacts(contacts.filter(c => c.id !== contact.id));
+  }
+
   const contactsList = [
     {
       id: "tyler",
@@ -28,7 +32,7 @@ function App() {
 
   return (
     <div>
-      <ListContacts contacts={contacts} />
+      <ListContacts contacts={contacts} onDeleteContact={removeContact} />
     </div>
   )
 }
