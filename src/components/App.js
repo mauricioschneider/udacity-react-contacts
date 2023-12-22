@@ -8,19 +8,19 @@ function App() {
       id: "tyler",
       name: "Tyler McGinnis",
       handle: "@tylermcinnis",
-      avatarURL: "http://lostlhost:5001/tyler.jpg"
+      avatarURL: "http://localhost:5001/tyler.jpg"
     },
     {
       id: "karen",
       name: "Karen Isgrigg",
       handle: "@karen_isgrigg",
-      avatarURL: "http://lostlhost:5001/karen.jpg"
+      avatarURL: "http://localhost:5001/karen.jpg"
     },
     {
       id: "richard",
       name: "Richard Kalehoff",
       handle: "@richardkalehoff",
-      avatarURL: "http://lostlhost:5001/richard.jpg"
+      avatarURL: "http://localhost:5001/richard.jpg"
     }
   ];
 
