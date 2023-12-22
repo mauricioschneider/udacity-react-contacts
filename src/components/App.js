@@ -1,9 +1,9 @@
-
+import { useState } from 'react';
 import '../css/App.css';
 import ListContacts from './ListContacts';
 
 function App() {
-  const contacts = [
+  const contactsList = [
     {
       id: "tyler",
       name: "Tyler McGinnis",
@@ -23,6 +23,8 @@ function App() {
       avatarURL: "http://localhost:5001/richard.jpg"
     }
   ];
+
+  const [contacts, setContacts] = useState(contactsList)
 
   return (
     <div>
