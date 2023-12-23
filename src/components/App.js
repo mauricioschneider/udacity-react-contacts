@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import '../css/App.css';
 import ListContacts from './ListContacts';
+import CreateContact from './CreateContact';
 import * as ContactsAPI from '../utils/ContactAPI';
 
 function App() {
@@ -22,10 +24,13 @@ function App() {
   }
 
   return (
-    <div>
-      <ListContacts contacts={contacts} onDeleteContact={removeContact} />
-    </div>
-  )
-}
+    <Routes>
+      <Route exact path="/" element={
+        <ListContacts contacts={contacts} onDeleteContact={removeContact} />
+      } />
+      <Route path="/create" element={<CreateContact />} />
+    </Routes>
+  );
+};
 
 export default App;

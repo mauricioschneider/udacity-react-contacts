@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ListContacts = ({ contacts, onDeleteContact }) => {
   const [query, setQuery] = useState("")
@@ -30,6 +31,9 @@ const ListContacts = ({ contacts, onDeleteContact }) => {
             updateQuery(event.target.value)
           }}
         />
+        <Link to="/create" className="add-contact">
+          Add contact
+        </Link>
       </div>
 
       {
